@@ -1,0 +1,12 @@
+img = imread('images/test3.tif');
+subplot(2,2,1);
+imshow(img);
+title("Original Image");
+subplot(2,2,2);
+imhist(img);
+[s, final] = imequalizehist(img);
+subplot(2,2,3);
+imshow(final);
+title("Equalized Image");
+subplot(2,2,4);
+imhist(final);

@@ -1,0 +1,13 @@
+img1 = imread('images/test3.tif');
+img2 = imread('images/1.jpg');
+ref = imread('images/2.jpg');
+[s1,r1] = imhistmatch(img1,ref);
+[s2,r2] = imhistmatch(img2,ref);
+subplot(2,2,1);
+imshow(r1);
+subplot(2,2,2);
+imshow(r2);
+subplot(2,2,3);
+hist(r1);
+subplot(2,2,4);
+hist(r2);
